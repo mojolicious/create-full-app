@@ -1,0 +1,44 @@
+{
+  "name": "@mojojs/create-full-app",
+  "version": "0.0.1",
+  "description": "Create a well structured mojo.js application",
+  "keywords": [
+    "mojojs"
+  ],
+  "dependencies": {
+    "@mojojs/core": "^1.2.1",
+    "@mojojs/path": "^1.5.2",
+    "@mojojs/util": "^1.0.0"
+  },
+  "bin": "./bin.js",
+  "type": "module",
+  "author": "Sebastian Riedel <s@kraih.com>",
+  "devDependencies": {
+    "c8": "^7.11.3",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
+    "tap": "^16.2.0"
+  },
+  "files": [
+    "bin.js"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mojolicious/create-full-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mojolicious/create-full-app/issues"
+  },
+  "scripts": {
+    "coverage": "c8 tap --no-coverage test/*.js",
+    "lint": "eslint \"test/*.js\" \"*.js\"",
+    "publish:minor": "npm version minor && npm publish",
+    "publish:patch": "npm version patch && npm publish",
+    "test": "tap --no-coverage test/*.js"
+  }
+}
