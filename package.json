@@ -1,6 +1,6 @@
 {
   "name": "@mojojs/create-full-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a well structured mojo.js application",
   "keywords": [
     "mojojs"
