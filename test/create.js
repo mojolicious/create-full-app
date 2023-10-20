@@ -20,7 +20,7 @@ t.test('Create', async t => {
     process.chdir(dir.toString());
 
     const {stdout, stderr} = await execFile('node', [path]);
-    t.match(stdout, /Generating application directory struture:/s);
+    t.match(stdout, /Generating application directory structure:/s);
     t.equal(stderr, '');
     t.ok(await dir.child('index.js').exists());
     t.ok(await dir.child('package.json').exists());
@@ -36,7 +36,7 @@ t.test('Create', async t => {
     process.chdir(dir.toString());
 
     const {stdout, stderr} = await execFile('node', [path, '--ts']);
-    t.match(stdout, /Generating application directory struture:.+index.ts/s);
+    t.match(stdout, /Generating application directory structure:.+index.ts/s);
     t.equal(stderr, '');
     t.ok(await dir.child('src', 'index.ts').exists());
     t.ok(await dir.child('package.json').exists());
